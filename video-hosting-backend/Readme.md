@@ -1,1 +1,0 @@
-This is a repository with code for Backend  of a video sharing app
