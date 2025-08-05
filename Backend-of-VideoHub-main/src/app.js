@@ -15,9 +15,11 @@ const app = express()
 
 app.use(
     cors({
-        origin: process.env.CORS_ORIGIN,
+        origin: "https://video-hosting-frontend.vercel.app",
         credentials: true
     }))
+console.log("CORS_ORIGIN:", process.env.CORS_ORIGIN);
+
 
 
 app.use(express.json({ limit: "10kb" }))
