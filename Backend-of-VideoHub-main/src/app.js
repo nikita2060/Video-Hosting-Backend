@@ -15,7 +15,7 @@ const app = express()
 
 app.use(
     cors({
-        origin: "https://video-hosting-frontend.vercel.app",
+        origin:process.env.CORS_ORIGIN,
         credentials: true
     }))
 console.log("CORS_ORIGIN:", process.env.CORS_ORIGIN);
