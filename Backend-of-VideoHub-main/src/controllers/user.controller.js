@@ -14,6 +14,9 @@ const generateAccessAndRefreshTokens = async (userId) => {
         }
         const accessToken = user.generateAccessToken();
         const refreshToken = user.generateRefreshToken();
+        console.log("ACCESS_TOKEN_SECRET:", process.env.ACCESS_TOKEN_SECRET);
+        console.log("REFRESH_TOKEN_SECRET:", process.env.REFRESH_TOKEN_SECRET);
+
 
         user.refreshToken = refreshToken;
         await user.save({ validateBeforeSave: false });
